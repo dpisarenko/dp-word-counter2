@@ -7,3 +7,4 @@ C:\usr\dp\dev\misc\dp-word-counter\dp-word-counter\obj\Debug\dp-word-counter.csp
 C:\usr\dp\dev\misc\dp-word-counter\dp-word-counter\obj\Debug\dp-word-counter.csproj.CoreCompileInputs.cache
 C:\usr\dp\dev\misc\dp-word-counter\dp-word-counter\obj\Debug\dp-word-counter.exe
 C:\usr\dp\dev\misc\dp-word-counter\dp-word-counter\obj\Debug\dp-word-counter.pdb
+C:\usr\dp\dev\misc\dp-word-counter\dp-word-counter\obj\Debug\dp_word_counter.Form1.resources

@@ -16,5 +16,17 @@ namespace dp_word_counter
         {
             InitializeComponent();
         }
+
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            Console.WriteLine("timer_Tick: " + DateTime.Now);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Console.WriteLine("Heyo!");
+            this.timer.Start();
+        }
     }
 }
