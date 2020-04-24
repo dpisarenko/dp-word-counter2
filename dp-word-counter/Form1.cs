@@ -48,8 +48,6 @@ namespace dp_word_counter
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            // var ahk = AutoHotkeyEngine.Instance;
-            // ahk.
             Process[] processes  = Process.GetProcesses();
             Process scrivenerProcess = null;
             foreach (Process curProcess in processes)
@@ -68,17 +66,16 @@ namespace dp_word_counter
             }
 
             var rect = new RECT();
-            
-            GetWindowRect(scrivenerProcess.Handle, out rect);
+
+            GetWindowRect(new HandleRef(this, scrivenerProcess.MainWindowHandle), out rect);
 
             int width = rect.Right - rect.Left;
             int height = rect.Bottom - rect.Top;
-
-            var bmp = new Bitmap(width, height, PixelFormat.Format32bppArgb);
+            var bmp = new Bitmap(width, height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
             Graphics graphics = Graphics.FromImage(bmp);
             graphics.CopyFromScreen(rect.Left, rect.Top, 0, 0, new System.Drawing.Size(width, height), CopyPixelOperation.SourceCopy);
 
-            bmp.Save("c:\\tmp\\test.png", ImageFormat.Png);
+            bmp.Save("C:\\usr\\dp\\ref\\marcomm\\2020_04_22_wordCounter\\2020-04-24-TestScreenshot.png", ImageFormat.Png);
 
             Console.WriteLine("Heyo!");
         }
